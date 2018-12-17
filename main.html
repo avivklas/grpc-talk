@@ -20,7 +20,9 @@ A Serialization mechanism of structured data
 ### Why?
 - Language-neutral
 - Platform-neutral
-- Binary
+- Less ambiguous with explicit data types
+- Fast serialization
+- Lightweight
 ---
 
 class: middle, center
@@ -77,7 +79,7 @@ class: table
 # Results:
 
 ### Raw JSON vs. Protobuf
-
+&nbsp;
 <table class="table">
 <thead>
 <tr>
@@ -144,7 +146,8 @@ class: table
 
 class: table
 
-### (gzipped) JSON vs. Protobuf
+## (gzipped) JSON vs. Protobuf
+&nbsp;
 
 <table class="table">
 <thead>
@@ -252,7 +255,7 @@ class: middle, center
 syntax = "proto3";
 package riskified;
 
-message HelloRequest {
+message GreetRequest {
     string name = 1;
 }
 
@@ -261,7 +264,7 @@ message HelloReply {
 }
 
 service Greeter {
-    rpc Greet(GreeterRequest) returns (HelloReply) {}
+    rpc Greet(GreetRequest) returns (HelloReply) {}
 }
 ```
 
@@ -300,6 +303,24 @@ def main
     s.run_till_terminated
 enda
 ```
+
+---
+
+class: middle, center
+ # Who's Using
+
+._3col[![Left-aligned image](https://grpc.io/img/square-icon.png)]
+._3col[![Left-aligned image](https://grpc.io/img/netflix-logo.png)]
+._3col[![Left-aligned image](https://grpc.io/img/cisco.svg)]
+._3col[![Left-aligned image](https://grpc.io/img/coreos-1.png)]
+._3col[![Left-aligned image](https://www.google.co.il/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)]
+._3col[![Left-aligned image](https://3on3f11f1a042q4pv95221y1-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/namely-logo-min.png)]
+
+---
+
+class: middle, center
+
+# **Q** & **A**
 
 ---
 
