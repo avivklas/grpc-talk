@@ -219,7 +219,7 @@ class: table
 </table>
 
 ---
-
+.pull-left[
 # gRPC
 
 ### What?
@@ -230,16 +230,25 @@ A RPC (**R**emote **P**rocedure **C**all) framework
 - Simple service definition
 - Works across languages and platforms
 - Bi-directional streaming and integrated auth
+]
+
+![](https://grpc.io/img/landing-2.svg)
 
 ---
 
-# How Is It Better Than **REST**
+# How Does It Compare to **REST**
+&nbsp;
 
-- HTTP/2 is faster due to binary transfer, request multiplexing and header compression
-- Natively supports protobuf and we already know it is better than JSON
-- Locally generated code instead of documentation
-- Duplex calls
-- Better error handling (Exceptions instead of error message)
+|                   | gRPC                                  | REST                          |
+|---                |:---:                                  |:---:                          |
+| Transport         | HTTP/2                                | HTTP 1.1                      |
+| Transfer          | Binary                                | Text                          |
+| Serialization     | Protobuf                              | JSON                          |
+| Streaming         | Yes                                   | No                            |
+| Error Handling    | Descriptive exception in client call  | HTTP Status code              |
+| Schema validation | Automatically according to proto file | Manually by server controller |
+| Decoupling        | Business code is always separated     | Can be separated              |
+| Debugging         | Specific client or through a gateway  | Easily via curl or postman    |
 
 ---
 
